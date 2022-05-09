@@ -45,7 +45,7 @@ namespace Catalog.API.Controllers
             return Ok(product);
         }
 
-        [Route("[action]/][category]", Name = "GetProductByCategory")]
+        [Route("[action]/{category}", Name = "GetProductByCategory")]
         [HttpGet]
         [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
@@ -60,7 +60,7 @@ namespace Catalog.API.Controllers
             return Ok(products);
         }
 
-        [Route("[action]/][name]", Name = "GetProductByName")]
+        [Route("[action]/{name}", Name = "GetProductByName")]
         [HttpGet]
         [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
